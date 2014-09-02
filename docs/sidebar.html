@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">
+<!-- The CSS package above applies Google styling to buttons and other elements. -->
+
+<style>
+.branding-below {
+  bottom: 56px;
+  top: 0;
+}
+
+.branding-text {
+  left: 7px;
+  position: relative;
+  top: 3px;
+}
+
+.logo {
+  vertical-align: middle;
+}
+
+
+.width-100 {
+  width: 100%;
+}
+</style>
+
+<div class="sidebar branding-below">
+  <form>
+    <div class="block form-group">
+      <label for="translated-text"><b>Newsletter HTML</b></label>
+      <textarea class="width-100" id="newsletterhtml" rows="25" readonly="readonly"><?!=HtmlService.createTemplateFromFile('dailynews').evaluate().getContent();?></textarea>
+      <input type="checkbox" id="newmember" <? if (data.newmember){ ?>checked<? } ?>>Add new member message<br>
+    </div>
+
+   <div class="block" id="button-bar">
+      <button id="preview" onclick="if (document.getElementById('newmember').checked) google.script.run.showPreview(true); else google.script.run.showPreview(false)">Preview</button>
+      <button class="blue" id="copy" onclick="this.innerText='Loading...'; if (document.getElementById('newmember').checked) google.script.run.showSidebar(true); else google.script.run.showSidebar(false)">Re-render</button>
+    </div>
+  </form>
+</div>
