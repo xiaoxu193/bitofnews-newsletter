@@ -106,7 +106,7 @@ border-bottom:1px solid #D3D3D3 !important;
 font-size:11px;
 line-height:13px;
 text-align:left;
-margin:35px 0 10px;
+margin:40px 0 10px;
 padding:0;
 }
 
@@ -123,7 +123,7 @@ padding:5px 8px;
 }
 
 .section .tag {
-color:#C4C4C4;;
+color:#8A8A8A;
 font-size:12px;
 font-weight:normal;
 }
@@ -313,17 +313,6 @@ font-weight:700;
 </div>
 <center style="margin-top:3px !important; font-size:11px; color:rgb(160, 160, 160);padding-left:2%;">Indian Prime Minister Narendra Modi greeting guests in Tokyo.  (<a href="http://www.bbc.com/news/in-pictures-29029523" style="color: #888888 !important;">AP</a>/Eugene Hoshiko)</center>
 
-<? if (newmember != null && newmember) { ?>
-<div style="margin-top:15px;">
-<p class="tidbit" style="max-width:86%;">
-        Hey there, welcome to your very first issue of Bit&middot;of&middot;News. We're so excited to have you here! We hope that each of our daily issues will increasingly accumulate your world knowledge. <br><br>
-        If there's anything we can do better, tell us at
-        <a href="mailto:hi@bitofnews.com">hi@bitofnews.com</a>. We love hearing from readers. <br><br>
-
-        Enjoy!
-      </p>
-</div>
-<? } ?>
 
       <ul class="ulcontent">
           <li style="list-style:none !important; margin-left:0px!important;margin-bottom:20px;">
@@ -334,20 +323,51 @@ font-weight:700;
             ">Today's Top News</span></h2>
            </li>
 
-            <? for each (var summary in data.summaries) {?>
-            <li class="newsblock" style="list-style:none; margin-left:0;">
+
+              <li class="newsblock" style="list-style:none; margin-left:0;">
               <div class="content">
-                <a class="title" href="<?= summary.link ?>" target="_blank"><?= summary.title ?></a>
-                <div class="tag" style=""> <span class="topic"><?= summary.publisher ?></span></div> 
+                <a class="title" href="http://bigstory.ap.org/article/more-30-teens-escape-detention-center" target="_blank">Mass Breakout From Juvenile Detention Center in Nashville</a>
+                <div class="tag" style=""> <span class="topic">Associated Press</span></div> 
                 <p style="margin:8px 0px 0px;">
-                <?= summary.summary ?>
-                <a href="<?= summary.link ?>" class="noline">
+                Thirty teens "overwhelmed" officers at a juvenile detention center by simultaneously breaking out of four dormitories and then crawling under a weak spot in a chain-link fence. Some turned themselves in, and others were swiftly returned by their own families.                <a href="http://bigstory.ap.org/article/more-30-teens-escape-detention-center" class="noline">
                 More»</a>
                 </p>
               </div>
             </li>
-            <? } ?>
-            
+
+                        <li class="newsblock" style="list-style:none; margin-left:0;">
+              <div class="content">
+                <a class="title" href="http://www.reuters.com/article/2014/09/02/us-entertainment-photos-apple-idUSKBN0GX29D20140902" target="_blank">Apple Says iCloud Systems Are Not Compromised</a>
+                <div class="tag" style=""> <span class="topic">Reuters</span></div> 
+                <p style="margin:8px 0px 0px;">
+                In other words, iCloud isn't vulnerable, but you have to keep your password safe. “None of the cases we have investigated has resulted from any breach in any of Apple's systems including iCloud or Find my iPhone.”                <a href="http://www.reuters.com/article/2014/09/02/us-entertainment-photos-apple-idUSKBN0GX29D20140902" class="noline">
+                More»</a>
+                </p>
+              </div>
+            </li>
+                        <li class="newsblock" style="list-style:none; margin-left:0;">
+              <div class="content">
+                <a class="title" href="http://www.bbc.com/news/world-middle-east-29038217" target="_blank">ISIS Beheads Another American Journalist</a>
+                <div class="tag" style=""> <span class="topic">BBC</span></div> 
+                <p style="margin:8px 0px 0px;">
+                An Islamic State video has appeared which shows the beheading of Steven Sotloff, a US journalist being held hostage by the militants.                <a href="http://www.bbc.com/news/world-middle-east-29038217" class="noline">
+                More»</a>
+                </p>
+              </div>
+            </li>
+
+            <li class="newsblock" style="list-style:none; margin-left:0;">
+              <div class="content">
+                <a class="title" href="http://time.com/3259699/putin-boast-kiev-2-weeks/" target="_blank">Putin Boasts of Being Able to Take Kiev in 2 Weeks</a>
+                <div class="tag" style=""> <span class="topic">TIME</span></div> 
+                <p style="margin:8px 0px 0px;">
+                European Commission President José Barroso Barroso said he asked Putin if Russian troops had crossed into Eastern Ukraine. “That is not the question,” Putin reportedly said. “But if I wanted to, I could take Kiev in two weeks.”                <a href="http://time.com/3259699/putin-boast-kiev-2-weeks/" class="noline">
+                More»</a>
+                </p>
+              </div>
+            </li>
+                        
+                        
          <li style="list-style:none !important; margin-left:0px !important; margin-bottom:20px;">
            <h2 class="section" style="padding-top:0px !important;"><span class="tag" style="
                 vertical-align: middle;
@@ -356,35 +376,34 @@ font-weight:700;
 
         <ul class="more">
 
-        <? for each (var other in data.others) { ?>
-        <li>
-            <strong><?= other.head ?></strong><?!= other.tail ?>
-        </li>
-        <? } ?>
-        </ul>
+                <li>
+            <strong>College too expensive? Blame Reagan.</strong> Our higher education crisis has its <a href="http://www.washingtonpost.com/posteverything/wp/2014/09/02/my-students-pay-too-much-for-college-blame-reagan/">roots in the 1980s</a>.        </li>
+                <li>
+            <strong>Violence among the Amish.</strong> In 2011, 15 Amish men and women <a href="http://www.theatlantic.com/national/archive/2014/09/violence-among-the-amish/379323/">forcibly cut the beards</a> of others in their faith. How could this happen?        </li>
+                <li>
+
+            <strong>Why do Americans love to blame teachers?</strong> Healthcare has its critics, but few of them are calling for doctors to be replaced. <a href="http://www.theatlantic.com/education/archive/2014/09/the-war-on-teachers/379403/">Education is different</a>.        </li>
+                <li>
+            <strong>A college degree still pays for itself</strong>—and in a <a href="http://qz.com/258769/a-college-degree-still-pays-for-itself-and-in-a-lot-less-time-than-it-used-to/">lot less time</a> than it used to.        </li>
+                </ul>
 
 
         <li style="list-style:none !important; margin-left:0px !important;">
            <h2 class="section"><span class="tag" style="
                 vertical-align: middle;
-            ">Quote of the Day</span></h2>
+            ">Adorable Facts. (Take your mind off the harsh world news)</span></h2>
            </li>
 
+        <li>
+        <center><img src="http://i.imgur.com/WrOPxlP.jpg" width="100%" style="border-radius:10px;">
+          <p>Sea otters have saggy skin under their armpits, which they use as pockets. <a href="http://www.theguardian.com/commentisfree/2013/sep/01/john-finnemore-sea-otters-badgers">Source</a></p>
+        </center>
 
-        <? if (data.quote != null && data.quote.quote && data.quote.description) { ?>
 
-        <li class="quoteblock tidbit">
-          <p class="" style="padding:0px 0px 0px 10px;margin-bottom:0px!important;">
-          <span style="font-style:italic;color: rgb(133, 133, 133);"><?= data.quote.quote ?></span> 
-          <?!= data.quote.description ?>
-
-          </p>
-
-          <p class="quotecite" style="color:black !important;">
-          </p>
         </li>
-        <? } ?>
 
+
+        
       </ul></div>
 
     </div>
